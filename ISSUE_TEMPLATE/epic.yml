@@ -1,5 +1,0 @@
-name: Epic
-description: An epic is a significant initiative that requires portfolio-level oversight due to its scale and impact.
-title: "[Epic]: "
-labels: ["portfolio", "program", "solution", "business", "enabler", "exploration", "architectural", "infrastructure", "compliance"]
-type: epic
