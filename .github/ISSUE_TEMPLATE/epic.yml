@@ -139,7 +139,7 @@ body:
       required: false
   - type: input
     id: mvp-cost
-    attribues:
+    attributes:
       label: MVP Cost
       description: The investment requested to fund the Minimum Viable Product (MVP).
       placeholder: 50000
@@ -147,7 +147,7 @@ body:
       required: false
   - type: input
     id: initial-estimate
-    attribues:
+    attributes:
       label: Initial Estimate
       description: The initial estimated cost of full implementation of the Epic if the MVP hypothesis is proven true.
       placeholder: 100000
@@ -155,7 +155,7 @@ body:
       required: false
   - type: input
     id: refined-estimate
-    attribues:
+    attributes:
       label: Refined Estimate
       description: Material updates to the estimated implementation cost, usually informed from experiments.
       placeholder: 125000
