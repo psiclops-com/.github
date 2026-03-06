@@ -193,16 +193,18 @@ body:
       required: false
   - type: textarea
     id: additional-supporting-data
-    description: Any additional data to support the business case.
-    value: |
-      **Attachments**
-      - Other supporting documentation
-      - Links to other data
-      - Feasibility or trade studies
-      - Models
-      - Market analysis
-
-      **Other Notes and Comments**
-      Additional miscellaneous information relevant to Lean Portfolio Management (LPM)
+    attributes:
+      label: Additional Supporting Data
+      description: Any additional data to support the business case.
+      value: |
+        **Attachments**
+        - Other supporting documentation
+        - Links to other data
+        - Feasibility or trade studies
+        - Models
+        - Market analysis
+  
+        **Other Notes and Comments**
+        Additional miscellaneous information relevant to Lean Portfolio Management (LPM)
     validations:
       required: false
