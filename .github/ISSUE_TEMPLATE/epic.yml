@@ -4,59 +4,205 @@ title: "[Epic]: "
 labels: ["portfolio", "program", "solution", "business", "enabler", "exploration", "architectural", "infrastructure", "compliance"]
 type: epic
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
   - type: input
-    id: contact
+    id: funnel-entry-date
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Funnel Entry Date
+      description: The date that the Epic entered the funnel.
+      placeholder: 1900-01-01
+    validations:
+      required: true
+  - type: input
+    id: epic-owner
+    attributes:
+      label: Epic Owner
+      description: The name of the Epic owner.
+      placeholder: @username
+    validations:
+      required: true
+  - type: textarea
+    id: key-stakeholders
+    attributes:
+      label: Key Stakeholders
+      description: The names of key stakeholders.
+      placeholder: |
+        - Stakeholder 1
+        - Stakeholder 2
+        - Stakeholder 3
     validations:
       required: false
   - type: textarea
-    id: what-happened
+    id: epic-description
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: Epic Description
+      description: An elevator pitch (value statement) that describes the epic clearly and concisely.
+      value: |
+        **For** customers
+        **who** do something
+        **the** solution
+        **is a** something (the how)
+        **that** provides this value
+        **unlike** competitor, current solution or non-existing solution
+        **our solution** does something better (the why)
+
+        **Example**
+        **For** enterprise customers and internal onboarding teams
+        **who** need to activate new accounts quickly, consistently, and with minimal manual intervention
+        **the** Unified Customer Onboarding Experience
+        **is a** cloud‑based workflow orchestration solution that integrates identity verification, provisioning, compliance checks, and customer communication into a single automated pipeline
+        **that** reduces onboarding time, eliminates redundant data entry, improves compliance accuracy, and provides real‑time visibility into onboarding progress
+        **unlike** the current fragmented onboarding process that relies on manual handoffs, disconnected systems, and inconsistent data quality
+        **our solution** automates the end‑to‑end onboarding journey, ensures data integrity across systems of record, and enables teams to scale onboarding volume without increasing operational overhead
     validations:
       required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-      default: 0
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
   - type: textarea
-    id: logs
+    id: business-outcome-hypothesis
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
+      label: Business Outcome Hypothesis
+      description: How the success of the epic will be measured.
+      placeholder: |
+        - 50% increase in shoppers under 25
+        - Availability increases from 95% to 99.7%
+    validations:
+      required: true
+  - type: textarea
+    id: leading-indicators
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com).
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      label: Leading Indicators
+      description: Innovation accounting metrics to provide leading indicators of the outcomes hypothesis.
+      placeholder: |
+        - A measurable change in purchaser demographics within 30 days of feature release
+    validations:
+      required: true
+  - type: textarea
+    id: in-scope
+    attributes:
+      label: In Scope
+      description: What is in scope for this Epic.
+      value: |
+        - 
+        - 
+        - 
+    validations:
+      required: false
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of Scope
+      description: What is out of scope for this Epic.
+      value: |
+        - 
+        - 
+        - 
+    validations:
+      required: false
+  - type: textarea
+    id: non-functional-requirements
+    attributes:
+      label: Non-Functional Requirements
+      description: Non-functional requirements (NFRs) associated with this Epic.
+      value: |
+        - 
+        - 
+        - 
+    validations:
+      required: true
+  - type: textarea
+    id: analysis-summary
+    attributes:
+      label: Analysis Summary
+      description: Brief summary of the analysis that has been formed to create the business case.
+    validations:
+      required: false
+  - type: textarea
+    id: go-no-go
+    attributes:
+      label: Go / No Go
+      description: Go or no-go recommendation and rationale.
+    validations:
+      required: false
+  - type: textarea
+    id: solution-analysis
+    attributes:
+      label: Solution Analysis
+      description: Details of the analysis that has been formed to create the business case.
+      value: |
+        **Which internal and/or external customers are affected, and how?**
+        Describe the user community and any markets affected.
+  
+        **What is the potential impact on solutions, programs and services?**
+        Identify solutions, programs, services, teams, departments, etc. that will be impacted by the Epic.
+  
+        **What is the potential impact on sales, distribution, deployment and support?**
+        For external solutions or products, describe any potential impact on how the product is sold, distributed, or deployed.
+    validations:
+      required: false
+  - type: input
+    id: mvp-cost
+    attribues:
+      label: MVP Cost
+      description: The investment requested to fund the Minimum Viable Product (MVP).
+      placeholder: 50000
+    validations:
+      required: false
+  - type: input
+    id: initial-estimate
+    attribues:
+      label: Initial Estimate
+      description: The initial estimated cost of full implementation of the Epic if the MVP hypothesis is proven true.
+      placeholder: 100000
+    validations:
+      required: false
+  - type: input
+    id: refined-estimate
+    attribues:
+      label: Refined Estimate
+      description: Material updates to the estimated implementation cost, usually informed from experiments.
+      placeholder: 125000
+    validations:
+      required: false
+  - type: textarea
+    id: forecasted-returns
+    attributes:
+      label: Forecasted Returns
+      description: The forecasted return from investing in the Epic.
+      value: |
+        **Type of Return**
+        Market share, increased revenue, improved productivity, new markets served, etc.
+    validations:
+      required: false
+  - type: textarea
+    id: development-strategy
+    attributes:
+      label: Development Strategy
+      description: The strategy for developing the Epic.
+      value: |
+        **In-House or Outsourced Development**
+        Recommendations for where the Epic should be developed.
+
+        **Incremental Implementation Strategy**
+        Epics are defined as a single whole, but each Epic updergoes incremental implementation. Define the incremental implementation strategy from the options below.
+        - Split into program Epics and fully decentralize control
+        - Take a vertial slice of an Epic across all trains and revise after aPlanning Interval (PI)
+        - One program implements some features, others wait
+        - Concurrent/sequential implementation with an Architectural Epic
+
+        **Sequencing and Dependencies**
+        Any constraints for sequencing the Epic. Identify any potential dependencies with other Epics or solutions.
+    validations:
+      required: false
+  - type: textarea
+    id: additional-supporting-data
+    description: Any additional data to support the business case.
+    value: |
+      **Attachments**
+      - Other supporting documentation
+      - Links to other data
+      - Feasibility or trade studies
+      - Models
+      - Market analysis
+
+      **Other Notes and Comments**
+      Additional miscellaneous information relevant to Lean Portfolio Management (LPM)
+    validations:
+      required: false
