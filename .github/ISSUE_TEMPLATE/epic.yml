@@ -17,7 +17,7 @@ body:
     attributes:
       label: Epic Owner
       description: The name of the Epic owner.
-      placeholder: @username
+      placeholder: "@username"
     validations:
       required: true
   - type: textarea
